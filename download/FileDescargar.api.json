@@ -1,0 +1,27 @@
+{
+  "apiFileID": "393cf052-9c6d-4535-ba71-64470f52d552",
+  "apiType": "rest",
+  "routes": [
+    {
+      "apiRouteID": "c38e5ba2-ac69-48de-a193-35c1eb4563ac",
+      "name": "FileDownload",
+      "enableCors": true,
+      "summary": "Download a file.",
+      "method": "get",
+      "path": "/file-download",
+      "inputs": [
+        {
+          "type": "string",
+          "from": "query",
+          "name": "idsolicitud",
+          "required": true,
+          "example": ""
+        }
+      ],
+      "subcategory": "",
+      "outputs": [],
+      "description": "Se conecta a goanywhere y descarga un archivo plano con el base64.",
+      "code": "\r\n// Api descarga excel\r\npjs.import('../js/servicesGoAny')\r\npjs.import('../login')\r\nfunction services_GoAny(idsolicitud) {\r\n  console.log(\"entro al ws\")\r\n  //console.log(val())\r\n  //console.log(username)\r\n  //console.log(password)\r\n  const body = idsolicitud\r\n  const resultRequest = services_GoAny('/descargarArchivos','-',body,'alexis.chamorro','W8890iSy')\r\n  response.status(200).send(resultRequest)\r\n}\r\nservices_GoAny(request.query.idsolicitud)\r\n"
+    }
+  ]
+}

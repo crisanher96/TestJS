@@ -1,0 +1,238 @@
+{
+  "text": "",
+  "formats": [
+    {
+      "screen": {
+        "record format name": "logeo",
+        "animation": "fade",
+        "animated screen": "new"
+      },
+      "items": [
+        {
+          "id": "CenteringLayout",
+          "field type": "layout",
+          "left": "calc(50% - 450px)",
+          "top": "0px",
+          "template": "simple container",
+          "height": "745px",
+          "width": "900px",
+          "center horizontally": "true",
+          "locked in place": "true"
+        },
+        {
+          "id": "Image2",
+          "field type": "image",
+          "left": "-485px",
+          "top": "-10px",
+          "image source": "public/img/fondo2.png",
+          "z index": "7",
+          "height": "1000px"
+        },
+        {
+          "id": "Layout2",
+          "field type": "layout",
+          "left": "-30px",
+          "top": "-80px",
+          "template": "simple container",
+          "height": "585px",
+          "width": "870px",
+          "layout": "CenteringLayout",
+          "container": "1"
+        },
+        {
+          "id": "Layout1",
+          "field type": "layout",
+          "left": "255px",
+          "top": "145px",
+          "template": "css panel",
+          "header text": "INICIAR SESION",
+          "header theme": "B - Blue",
+          "body theme": "C - Gray",
+          "height": "410px",
+          "width": "435px",
+          "z index": "8",
+          "layout": "Layout2",
+          "container": "1"
+        },
+        {
+          "id": "TextBox1",
+          "field type": "textbox",
+          "css class": "input",
+          "value": {
+            "fieldName": "username",
+            "dataLength": "25",
+            "trimLeading": "false",
+            "trimTrailing": "true",
+            "blankFill": "false",
+            "rjZeroFill": "false",
+            "dataType": "varchar",
+            "formatting": "Text",
+            "textTransform": "none",
+            "designValue": "[username]"
+          },
+          "left": "110px",
+          "top": "160px",
+          "height": "35px",
+          "width": "220px",
+          "required": "true",
+          "font family": "Verdana",
+          "layout": "Layout1",
+          "container": "1"
+        },
+        {
+          "id": "Label1",
+          "field type": "output field",
+          "css class": "label",
+          "value": "USUARIO",
+          "left": "145px",
+          "top": "135px",
+          "width": "150px",
+          "text align": "center",
+          "font weight": "normal",
+          "layout": "Layout1",
+          "container": "1"
+        },
+        {
+          "id": "Label2",
+          "field type": "output field",
+          "css class": "label",
+          "value": "CONTRASEÑA",
+          "left": "140px",
+          "top": "200px",
+          "width": "150px",
+          "text align": "center",
+          "font weight": "normal",
+          "layout": "Layout1",
+          "container": "1"
+        },
+        {
+          "id": "TextBox2",
+          "field type": "password field",
+          "css class": "input",
+          "value": {
+            "fieldName": "password",
+            "dataLength": "25",
+            "trimLeading": "false",
+            "trimTrailing": "true",
+            "blankFill": "false",
+            "rjZeroFill": "false",
+            "dataType": "varchar",
+            "formatting": "Text",
+            "textTransform": "none",
+            "designValue": "[password]"
+          },
+          "left": "110px",
+          "top": "225px",
+          "height": "35px",
+          "width": "220px",
+          "required": "true",
+          "layout": "Layout1",
+          "container": "1"
+        },
+        {
+          "id": "Button1",
+          "field type": "css button",
+          "value": "Login",
+          "left": "95px",
+          "top": "275px",
+          "width": "255px",
+          "height": "40px",
+          "response": {
+            "fieldName": "login",
+            "customTrue": "",
+            "customFalse": "",
+            "dataType": "indicator",
+            "formatting": "Indicator",
+            "indFormat": "1 / 0"
+          },
+          "shortcut key": "Enter",
+          "layout": "Layout1",
+          "container": "1"
+        },
+        {
+          "id": "Image1",
+          "field type": "image",
+          "left": "90px",
+          "top": "15px",
+          "image source": "public/img/logo.png",
+          "height": "75px",
+          "width": "250px",
+          "z index": "21",
+          "layout": "Layout1",
+          "container": "1"
+        }
+      ]
+    },
+    {
+      "screen": {
+        "record format name": "error",
+        "animated screen": "new",
+        "animation": "slide-down",
+        "overlay screens": "true"
+      },
+      "items": [
+        {
+          "id": "Layout1",
+          "field type": "layout",
+          "css class": "ice-blue-panel",
+          "left": "37%",
+          "top": "10%",
+          "template": "css panel",
+          "header theme": "B - Blue",
+          "body theme": "C - Gray",
+          "height": "210px",
+          "width": "436px",
+          "z index": "8"
+        },
+        {
+          "id": "Icon1",
+          "field type": "icon",
+          "left": "185px",
+          "top": "5px",
+          "icon": "material:face",
+          "width": "65px",
+          "height": "40px",
+          "z index": "7",
+          "layout": "Layout1",
+          "container": "1"
+        },
+        {
+          "id": "Button1",
+          "field type": "styled button",
+          "css class": "button",
+          "value": "ACEPTAR",
+          "left": "150px",
+          "top": "105px",
+          "width": "145px",
+          "height": "30px",
+          "response": {
+            "fieldName": "ok",
+            "customTrue": "",
+            "customFalse": "",
+            "dataType": "indicator",
+            "formatting": "Indicator",
+            "indFormat": "1 / 0"
+          },
+          "layout": "Layout1",
+          "container": "1"
+        },
+        {
+          "id": "Heading1",
+          "field type": "output field",
+          "css class": "heading",
+          "value": "Error de Contraseña o Usuario",
+          "left": "45px",
+          "top": "50px",
+          "height": "35px",
+          "width": "301px",
+          "font weight": "normal",
+          "font size": "26px",
+          "layout": "Layout1",
+          "container": "1"
+        }
+      ]
+    }
+  ],
+  "keywords": [],
+  "long name aliases": true
+}
